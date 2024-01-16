@@ -5,12 +5,20 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
     // this is for sorting WITHIN an import
-    'sort-imports': ['error', { ignoreCase: true, ignoreDeclarationSort: true }],
+    'sort-imports': [
+      'error',
+      { ignoreCase: true, ignoreDeclarationSort: true },
+    ],
     // this is for sorting imports
     'import/order': [
       'error',
       {
-        groups: [['external', 'builtin'], 'internal', ['sibling', 'parent'], 'index'],
+        groups: [
+          ['external', 'builtin'],
+          'internal',
+          ['sibling', 'parent'],
+          'index',
+        ],
         pathGroups: [
           {
             pattern: '@(react|react-native)',
